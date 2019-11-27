@@ -1,0 +1,38 @@
+{
+  "name": "@acastellon/graphql",
+  "version": "1.0.0",
+  "description": "GraphQL (throw HTTPS) based in Express",
+  "main": "graphql.js",
+  "scripts": {
+    "start": "set SERVER_ENVIRONMENT=local && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonio-castellon/module-graphql.git"
+  },
+  "keywords": [
+    "graphql",
+    "express",
+    "ws"
+  ],
+  "dependencies": {
+    "@acastellon/auth": "^1.0.3",
+    "@acastellon/cors": "^1.0.2",
+    "@acastellon/ldap": "^1.0.3",
+    "@acastellon/vcs": "^1.0.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "hpp": "^0.2.2",
+    "https": "^1.0.0",
+    "express-graphql": "^0.9.0",
+    "graphql-tools": "^4.0.6"
+  },
+  "author": "Antonio Castellon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonio-castellon/module-graphql/issues"
+  },
+  "homepage": "https://github.com/antonio-castellon/module-graphql#readme"
+}

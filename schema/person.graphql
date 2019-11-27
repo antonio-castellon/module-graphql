@@ -1,0 +1,15 @@
+"describes Person item"
+type Person {
+  id: Int
+  ,name: String!
+  ,description: String
+},
+input PersonInput {
+  name: String
+},
+extend type Query {
+  people: [Person]
+},
+extend type Mutation {
+  createPerson(person: PersonInput!): String
+}

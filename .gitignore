@@ -1,0 +1,3 @@
+# .gitignore
+/config.auth.js
+/config.server.js
