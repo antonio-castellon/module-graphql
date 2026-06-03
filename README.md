@@ -25,6 +25,25 @@ Internally loads schemas via `./api.js` (merges base _.graphql + directory *.gra
 
 The returned model from api.js is `{ schema, resolvers }` passed to graphqlHTTP.
 
+**Minimal example (self-contained):**
+
+```js
+const SERVER = {
+  CERTIFICATION_PATH: '/path/to/certs',
+  PORT: 4000,
+  WHITELIST: './whitelist',
+  SCHEMA_PATH: './schema'  // directory with .graphql + .resolvers.js
+};
+
+const AUTH = require('./config.auth.js');
+
+const graphql = require('@acastellon/graphql')(SERVER, AUTH);
+
+graphql.run(() => {
+  console.log('GraphQL server is running at https://localhost:4000');
+});
+```
+
 ## License
 
 MIT
