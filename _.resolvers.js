@@ -1,7 +1,4 @@
 module.exports = {
-    hello: () => {
-        return "Hello world!";
-    }
-}
-
-
+  hello: () => "Hello world!",
+  setHello: ({ text }) => { /* implement */ return text; }
+};
