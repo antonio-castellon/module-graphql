@@ -1,26 +1,12 @@
-//
-// Dummy example of Business logic
-//
-
-let people = [ {
-    id: 1,
-    name: "pepe"
-}];
+let people = [ { id: 1, name: "pepe" } ];
 
 const addPerson = person => {
-    const nextId = people.length === 0 ? 1 : people[people.length - 1].id + 1;
-    people = [...people, { ...person, id: nextId }];
-    console.log("people", people);
-    return "success";
+  const nextId = people.length === 0 ? 1 : people[people.length - 1].id + 1;
+  people = [...people, { ...person, id: nextId }];
+  console.log("people", people);
+  return "success";
 };
 
-const getPeople = () => {
-    console.log("get people", people);
-    return people;
-};
+const getPeople = () => people;
 
-module.exports = {
-    addPerson,
-    getPeople
-};
-
+module.exports = { addPerson, getPeople };

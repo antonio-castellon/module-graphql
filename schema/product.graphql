@@ -1,16 +1,4 @@
-"describes Product item"
-type Product {
-    id: Int
-    ,name: String!
-    ,description: String
-},
-
-extend type Query {
-    products: [Product],
-    product(id: Int!): Product
-},
-
-extend type Mutation {
-    createProduct(name: String!, description: String!): String
-}
-
+type Product { id: Int, name: String! }
+input ProductInput { name: String }
+extend type Query { products: [Product] }
+extend type Mutation { createProduct(product: ProductInput!): String }
