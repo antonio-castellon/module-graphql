@@ -15,6 +15,16 @@ const graphql = require('@acastellon/graphql')(SERVER, AUTH);
 graphql.run(() => { console.log('GraphQL server running'); });
 ```
 
+## API / Module surface
+
+Constructor returns `{ run(cb?) }`.
+
+- `run(cb)`: Starts the HTTPS server (assumes CERTIFICATION_PATH). Listens on SERVER.PORT or process.env.PORT.
+
+Internally loads schemas via `./api.js` (merges base _.graphql + directory *.graphql + corresponding * .resolvers.js using Object.assign).
+
+The returned model from api.js is `{ schema, resolvers }` passed to graphqlHTTP.
+
 ## License
 
 MIT
