@@ -21,12 +21,12 @@
     "@acastellon/cors": "^1.1.0",
     "@acastellon/ldap": "^1.1.0",
     "@acastellon/vcs": "^1.1.0",
+    "@graphql-tools/schema": "^8.0.0",
     "cookie-parser": "^1.4.4",
     "express": "^4.18.2",
-    "helmet": "^7.1.0",
-    "hpp": "^0.2.2",
     "express-graphql": "^0.12.0",
-    "graphql-tools": "^8.0.0"
+    "helmet": "^7.1.0",
+    "hpp": "^0.2.2"
   },
   "author": "Antonio Castellon",
   "license": "MIT",
@@ -36,5 +36,12 @@
   "homepage": "https://github.com/antonio-castellon/module-graphql#readme",
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "files": [
+    "*.js",
+    "README.md",
+    "LICENSE",
+    "config.*.template.js",
+    "schema/"
+  ]
 }
